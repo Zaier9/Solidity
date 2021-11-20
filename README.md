@@ -28,3 +28,8 @@ Structs:
 
 Arreglos:
     Son listas de datos, incluso se pueden hacer listas de Structs, añadiendo estructuras más complejas
+
+Funciones Array Dinámico
+
+* push: Se usa para adicionar elementos al final de un array
+* pop: Se usa para remover el último elemento de un array
