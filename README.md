@@ -20,3 +20,11 @@ Variables globales
 * msg: Toda transacción es un mensaje firmado. En este objeto vienen los datos de dicho mensaje (sender, value, etc.)
 * tx: Represena la transacción, es distitna respecto a msg porque cosas como el sender van variando conforme se concatenan llamadas entre contratos
 * block: Información respecto al bloque
+
+## Structs y Arrays
+
+Structs:
+    Son estructuras de datos complejas, que agrupan una serie de datos.
+
+Arreglos:
+    Son listas de datos, incluso se pueden hacer listas de Structs, añadiendo estructuras más complejas
