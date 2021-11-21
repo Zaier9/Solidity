@@ -151,3 +151,9 @@ El gas es una unidad de medida para el procesamiento de la EVM. Se mide en unida
 Priority fee
 
 A partir del EIP1559 , se realizaron cambios importantes al mercado de gas, y se contempla el priority fee, que es el extra que menciona Sebastián, y es una propina para el minero con la cuál se obtiene prioridad en la ejecución
+
+## Transferencias de ether desde un contrato
+
+* send: Envía un monto a una dirección y retorna false si la transferencia no se realiza
+* transfer: Envía un monto y revierte si no se puede realizar
+* call: Esta es más complicada, pero básicamente realiza una llamada hacia una dirección. Incluso se pueden llamar funciones de otro contrato si se le pasa un address válido y la llamada dentro del parámetro data. No obstante, al ser un mensaje, puede llevar ether, y por eso se usa para envíos. Retorna el resultado de la función llamada (si es que fué el caso)
