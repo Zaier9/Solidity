@@ -123,4 +123,19 @@ modifier isOwner() {
 * revert: Es un error que regresa todas las modificaciones de estado realizadas durante la ejecución de la función. Recibe por parámetro un mensaje de error
 * require: Es una variación del revert que recibe por parámetro una expresión booleana y revierte si esta expresión es falsa.
 
-Cabe destacar que cualquier consumo de gas ejecutado hasta el momento de un revert se debe pagar, porque el cómputo fué utilizado
+Cabe destacar que cualquier consumo de gas ejecutado hasta el momento de un revert se debe pagar, porque el cómputo fué utilizado.
+
+## Tipos de Almacenamiento
+
+* Storage: Memoria persistente. Es el más costoso. Similar a la memoria ROM
+* Memory: Variables temporales durante ejecución. Se asimila a la RAM
+* Calldata: Son constantes definidas en el entorno de ejecución de una variable. No son modificables.
+
+Memoria dinámica
+
+La razón por la que un string necesita un sufijo que indique el uso de memoria, es debido a que es memoria dinámica, por lo que calldata no puede alocar una cantidad definida de memoria, por lo que tenemos que indicarle que esa variable la pase por la memoria volátil (RAM/memory), para que la función la pueda manejar correctamente.
+
+Este efecto ocurre con cualquier cosa que sea de tamaño no definido, por ejemplo:
+
+* Un arreglo
+* Un string
