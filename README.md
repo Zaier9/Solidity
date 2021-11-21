@@ -49,3 +49,10 @@ Enum
 Representa una lista de valores posibles creados por el usuario, una variable del tipo de enum declarado sólo puede tomar los valores enumerados.
 
 enum { <value1>, ..., <valueN> }
+
+## Estructuras de Control
+
+* if/else: Estructura condicional. Ejecuta un bloque u otro dependiendo de una evaluación booleana
+* for: Estructura cíclica que ejecuta un bloque de instrucciones un número determinado de veces
+* while: Estructura cíclica que repite un bloque mientras se cumpla una condición
+* do while: Estructura cíclica que se asmilia al while, con la diferencia que siempre se ejecuta almenos una vez
