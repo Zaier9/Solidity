@@ -56,3 +56,71 @@ enum { <value1>, ..., <valueN> }
 * for: Estructura cíclica que ejecuta un bloque de instrucciones un número determinado de veces
 * while: Estructura cíclica que repite un bloque mientras se cumpla una condición
 * do while: Estructura cíclica que se asmilia al while, con la diferencia que siempre se ejecuta almenos una vez
+
+## Eventos
+
+Los eventos son un tipo de dato que sirve para emitir avisos de que ocurrió alguna acción en particular.
+
+Puede ser utilizado por clientes para escuchar cambios importantes, y también pueden utilizarse para indexar información.
+
+Protocolos como TheGraph utilizan indexación de eventos para agregación de informacións
+
+## Funciones
+
+Son piezas de código definidas por un nombre, parámetros y modificadores.
+
+function <name>(<type> <parameter>..., [..., ]>) 
+  <access modifiers>
+  <mutability modifiers>
+  <user defined modifiers> 
+  <returns>(<type>) {
+    <content>
+}
+
+* name: Nombre de la función
+* type: Tipo de dato
+* parameter: Nombre del parámetro
+* access modifier: public, private, internal, external
+* mutability modifier: view, pure. Ambas hacen que la función no cobre gas, y si se omite, se asume que es una función que escribe en el storage de la EVM
+* user defined modifiers: Son modificadores definidos por el usuario, son opcionales y se presentan en la siguiente clase
+* returns: Indica que la función retornará uno o más datos
+
+## Modificadores
+
+Los modificadores son funciones especiales por el usuario y que se añaden a otra función para envolver su funcionamiento
+
+modifier <name>(<type> <parameter>..., [,...]) {
+  <content>
+}
+El guión bajo
+
+El guión bajo (también conocido como placeholder), es una instrucción especial del modificador que indica dónde se va a ejecutar el código de la función inicial que envuelve al modifier.
+
+Por ejemplo
+
+// Primero valida y luego ejecuta
+modifier isOwner() {
+  if(<condicion>) revert()
+  _;
+}
+
+// Primero ejecuta y luego valida
+modifier isOwner() {
+   _;
+  if(<condicion>) revert()
+}
+
+// Ejecuta, valida y vuelve a ejecutar
+modifier isOwner() {
+   _;
+  if(<condicion>) revert()
+   _;
+}
+
+## Manejo de Errores
+
+* assert: Se utiliza para pruebas, compara dos valores
+* revert: Es un error que regresa todas las modificaciones de estado realizadas durante la ejecución de la función. Recibe por parámetro un mensaje de error
+* require: Es una variación del revert que recibe por parámetro una expresión booleana y revierte si esta expresión es falsa.
+
+Cabe destacar que cualquier consumo de gas ejecutado hasta el momento de un revert se debe pagar, porque el cómputo fué utilizado
