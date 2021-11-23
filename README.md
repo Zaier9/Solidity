@@ -174,3 +174,24 @@ A partir del EIP1559 , se realizaron cambios importantes al mercado de gas, y se
   * También podemos importar contratos que se encuentren en un repositorio o en un paquete como **npm**
 
 Además de contratos, podemos importar librerias que son similares a los contratos, pero no contienen estado y solo brindan utilidad.
+
+## Herencia
+
+* El concepto es similar al de la programación orientada a objetos y la identificaremos con la sentencia **is**.
+* Si un contrato tiene un constructor con parámetros, debemos indicar **qué valores debe tomar ese constructor para poder derivarse**.
+
+## Override
+
+* Podemos definir funciones de tipo **virtual** para indicar que pueden ser redefinidas en sus contratos derivados.
+* Cuando se redefine una función de debe indicar el tipo **override** en su declaración.
+* Si una función virtual no define implementación, el contrato se convierte en un **contrato abstracto**.
+
+## Interfaces
+
+* Nos permiten definir el comportamiento que queremos que tenga un contrato.
+* Se implementa igual que la herencia de contratos.
+* Sus funciones no tienen implementación, solo encabezados.
+
+## Super
+
+Podemos hacer referencia a algún elemento o función de la clase superior por medio de la sentencia **super**.
