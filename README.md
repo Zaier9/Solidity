@@ -166,4 +166,11 @@ A partir del EIP1559 , se realizaron cambios importantes al mercado de gas, y se
 
   Cuando se envía una transferencia lo primero que se intenta es verificar si existe una función con la firma especificada.
 
-  Si no se encuentra, se buscará una función fallback que reciba parámetros.
+  Si no se encuentra, se buscará una función **fallback** que reciba parámetros.
+
+  ## Manejo de dependencias y librerias
+
+  * Con la sentencia **"import"** podemos hacer referencia a un contrato que esté definido en el mismo ámbito en el que estamos trabajando.
+  * También podemos importar contratos que se encuentren en un repositorio o en un paquete como **npm**
+
+Además de contratos, podemos importar librerias que son similares a los contratos, pero no contienen estado y solo brindan utilidad.
