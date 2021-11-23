@@ -168,7 +168,7 @@ A partir del EIP1559 , se realizaron cambios importantes al mercado de gas, y se
 
   Si no se encuentra, se buscará una función **fallback** que reciba parámetros.
 
-  ## Manejo de dependencias y librerias
+## Manejo de dependencias y librerias
 
   * Con la sentencia **"import"** podemos hacer referencia a un contrato que esté definido en el mismo ámbito en el que estamos trabajando.
   * También podemos importar contratos que se encuentren en un repositorio o en un paquete como **npm**
