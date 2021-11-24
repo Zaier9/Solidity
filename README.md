@@ -195,3 +195,12 @@ Además de contratos, podemos importar librerias que son similares a los contrat
 ## Super
 
 Podemos hacer referencia a algún elemento o función de la clase superior por medio de la sentencia **super**.
+
+## Instanciar un contrato en otro contrato
+
+* Dentro de un contrato podemos hacer referencia a otro contrato ya implemetado en la red a través de su dirección.
+* Para esto podemos utilizar el tipo de contrato al que referenciamos o bien alguna de sus clases superiores.
+
+## Polimorfismo
+
+* Capacidad de poder utilizar contratos derivados en una estructura.
