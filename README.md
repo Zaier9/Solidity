@@ -204,3 +204,34 @@ Podemos hacer referencia a algún elemento o función de la clase superior por m
 ## Polimorfismo
 
 * Capacidad de poder utilizar contratos derivados en una estructura.
+
+## Tokens
+
+* Son una representación de un elemento que tiene un valor en un contexto determinado.
+* En general ésta representación tiene menos valor que el objeto original.
+* Existen diferentes clasificaciones para los tokens.
+
+## Clasificación
+
+* **Fungibles:** son elementos reemplazables por otros con las mismas características. 
+  Además son divisibles y podemos consumir sólo una fracción.
+* **No fungibles:** son elementos que pueden variar de valor con respecto de elementos de iguales características.
+  NO son divisibles.
+
+## ERC-20
+
+* Es el estándar que representa a los tokens fungibles.
+* Al ser un estándar no cuenta con una implementación, sino que solo define una interfase.
+* Existen otros estándares que implementan tokens fungibles, pero todos ellos mantienen la compatibilidad contra el token ERC-20.
+
+## ERC-721
+
+* Es el estándar que representa a los tokens no fungibles.
+* Al igual que el ERC-20 solo define una interfase.
+* A diferencia de los tokens fungibles, éstos tienen un identificador único conocido como **tokenId**.
+
+## TokenUri
+
+* Contiene información no técnica acerca de un token.
+* En general tiene que ver con información estética o visual relacionada.
+* Fue introducida por el estándar ERC-721, pero se utiliza en otros tipos de token.
