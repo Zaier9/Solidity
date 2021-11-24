@@ -235,3 +235,9 @@ Podemos hacer referencia a algún elemento o función de la clase superior por m
 * Contiene información no técnica acerca de un token.
 * En general tiene que ver con información estética o visual relacionada.
 * Fue introducida por el estándar ERC-721, pero se utiliza en otros tipos de token.
+
+## Application Binary Interface(ABI)
+
+* **ABI** viene de Application Binary Interface.
+* Es una interfase que nos detalla qué **definiciones tiene el contrato y sus funciones**, sin conocer su implementación.
+* Nos permite saber qué forma tiene un contrato para poder interactuar con sus funciones, especialmente si estamos contruyendo la capa de usuario.
